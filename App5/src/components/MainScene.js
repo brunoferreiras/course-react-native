@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StatusBar, View, Image } from 'react-native';
+import { StatusBar, View, Image, StyleSheet } from 'react-native';
 
 import BarNavigation from './BarNavigation';
 
@@ -19,12 +19,38 @@ export default class App extends Component {
 
         <BarNavigation />
 
-        <Image source={logo} />
-        <Image source={clientMenu} />
-        <Image source={contactMenu} />
-        <Image source={companyMenu} />
-        <Image source={serviceMenu} />
+        <View style={styles.logo}>
+          <Image source={logo} />
+        </View>
+        <View style={styles.images}>
+          <View style={styles.imagesGroup}>
+            <Image style={styles.imageMenu} source={clientMenu} />
+            <Image style={styles.imageMenu} source={contactMenu} />
+          </View>
+          
+          <View style={styles.imagesGroup}>
+            <Image style={styles.imageMenu} source={companyMenu} />
+            <Image style={styles.imageMenu} source={serviceMenu} />
+          </View>
+        </View>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  images: {
+    marginTop: 20,
+    alignItems: 'center'
+  },
+  imagesGroup: {
+    flexDirection: 'row'
+  },
+  logo: {
+    marginTop: 30,
+    alignItems: 'center'
+  },
+  imageMenu: {
+    margin: 15
+  }
+});

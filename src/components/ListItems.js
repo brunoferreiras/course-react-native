@@ -19,8 +19,8 @@ export default class ListItems extends Component {
 
   render() {
     return (
-      <ScrollView>
-          { this.state.listItems.map(item => (<Item key={item.titulo} data={item} />)) }
+      <ScrollView style={{ backgroundColor: '#DDD' }}>
+        { this.state.listItems.map(item => (<Item key={item.titulo} data={item} />)) }
       </ScrollView>      
     );
   }

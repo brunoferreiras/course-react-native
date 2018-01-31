@@ -9,7 +9,7 @@ const contactMenu = require('../imgs/menu_contato.png');
 const companyMenu = require('../imgs/menu_empresa.png');
 const serviceMenu = require('../imgs/menu_servico.png');
 
-export default class App extends Component {
+export default class MainScene extends Component {
   render() {
     return (
        <View>

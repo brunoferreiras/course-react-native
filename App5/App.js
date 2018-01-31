@@ -3,12 +3,12 @@ import {
   View
 } from 'react-native';
 
-import MainScene from './src/components/MainScene';
+import ClientScene from './src/components/ClientScene';
 
 export default class App extends Component {
   render() {
     return (
-      <MainScene />
+      <ClientScene />
     );
   }
 }

@@ -13,7 +13,7 @@ export default class App extends Component {
         initialRoute={{ id: 'a' }}
         renderScene={(route, navigator) => {
           if (route.id === 'a') {
-            return (<MainScene />);
+            return (<MainScene navigator={navigator} />);
           }
 
           if (route.id === 'b') {

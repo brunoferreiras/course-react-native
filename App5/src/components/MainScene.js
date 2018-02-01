@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StatusBar, View, Image, StyleSheet } from 'react-native';
+import { StatusBar, View, Image, StyleSheet, TouchableHighlight } from 'react-native';
 
 import BarNavigation from './BarNavigation';
 
@@ -24,7 +24,13 @@ export default class MainScene extends Component {
         </View>
         <View style={styles.images}>
           <View style={styles.imagesGroup}>
-            <Image style={styles.imageMenu} source={clientMenu} />
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigation.push({ id: 'b' });
+              }}
+            >
+              <Image style={styles.imageMenu} source={clientMenu} />
+            </TouchableHighlight>
             <Image style={styles.imageMenu} source={contactMenu} />
           </View>
           

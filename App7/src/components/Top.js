@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
+import Header from './Header';
+
 const Top = props => (
-  <View>
-    <Text>Topo</Text>
-  </View>
+  <Header />
 );
 
 export { Top };

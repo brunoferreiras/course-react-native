@@ -1,6 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Picker, Text, StyleSheet } from 'react-native';
 
 export default props => (
-  <Text>Operação</Text>
+  <Picker style={styles.operation}>
+    <Picker.Item label='Soma' value='sum' />
+    <Picker.Item label='Subtração' value='sub' />
+  </Picker>
 );
+
+const styles = StyleSheet.create({
+  operation: {
+    marginTop: 15,
+    marginBottom: 15
+  }
+});

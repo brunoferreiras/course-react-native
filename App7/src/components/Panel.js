@@ -1,9 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import Input from './Input';
+import Operation from './Operation';
+import Command from './Command';
 
 const Panel = props => (
   <View>
-    <Text>Painel</Text>
+    <Input />
+    <Operation />
+    <Command />
   </View>
 );
 

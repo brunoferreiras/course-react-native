@@ -1,12 +1,26 @@
-import React from 'react';
-import { Picker, Text, StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import { Picker, StyleSheet } from 'react-native';
 
-export default props => (
-  <Picker style={styles.operation}>
-    <Picker.Item label='Soma' value='sum' />
-    <Picker.Item label='Subtração' value='sub' />
-  </Picker>
-);
+export default class Operation extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { operation: '' };
+  }
+
+  render() {
+    return (
+      <Picker
+        style={styles.operation}
+        selectedValue={this.state.operation}
+        onValueChange={option => { this.setState({ operation: option }); }}
+      >
+        <Picker.Item label='Soma' value='sum' />
+        <Picker.Item label='Subtração' value='sub' />
+      </Picker>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   operation: {

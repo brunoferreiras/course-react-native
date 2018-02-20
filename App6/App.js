@@ -11,8 +11,8 @@ export default class App extends Component {
       <Router>
         <Stack key='root'>
           <Scene key='main' component={Main} initial title='Cara ou coroa' />
-          <Scene key='aboutGame' component={AboutGame} />
-          <Scene key='othersGames' component={OthersGames} />
+          <Scene key='aboutGame' component={AboutGame} title='Sobre o jogo' />
+          <Scene key='othersGames' component={OthersGames} title='Outros jogos' />
         </Stack>
       </Router>
     );

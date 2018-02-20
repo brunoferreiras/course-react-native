@@ -20,7 +20,9 @@ export default class Main extends Component {
 
         <View style={styles.showGame}>
           <Image source={logo} />          
-          <TouchableHighlight>
+          <TouchableHighlight
+            onPress={() => { Actions.result(); }}
+          >
             <Image source={btnPlay} />
           </TouchableHighlight>
         </View>

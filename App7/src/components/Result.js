@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import Visor from './Visor';
 
 const Result = props => (
-  <View>
-    <Text>Resultado</Text>
-  </View>
+  <Visor />
 );
 
 export { Result };
